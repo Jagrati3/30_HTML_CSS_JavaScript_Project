@@ -1,0 +1,76 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #fabdc4, #f08593 ,#ee5468);
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    color: #d6336c;
+    margin-top: 30px;
+    font-size: 2.5rem;
+}
+
+/* Input box */
+input {
+    padding: 10px;
+    width: 350px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid rgb(228, 81, 128);
+    outline: none;
+    margin: 10px;
+    font-size: 26px;
+}
+
+/* Add button */
+button {
+    padding: 15px 15px;
+    border: 2px solid rgb(0, 18, 211);
+    border-radius: 20px;
+    background-color: #f75e7a;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #d11a5a;
+}
+
+/* List container */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Each task */
+li {
+    background: white;
+    margin: 10px auto;
+    padding: 10px 15px;
+    width: 300px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Delete button */
+.delete {
+    background-color: #ff6b81;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.delete:hover {
+    background-color: #c9184a;
+}
