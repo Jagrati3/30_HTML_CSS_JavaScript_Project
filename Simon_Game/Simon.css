@@ -1,0 +1,77 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #111;
+    color: white;
+}
+
+/* Heading */
+h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Container */
+.btn-container {
+    margin-top: 40px;
+}
+
+/* Rows */
+.line-one,
+.line-two {
+    display: flex;
+    justify-content: center;
+}
+
+/* Buttons */
+.btn {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    transition: 0.2s;
+}
+
+/* Colors */
+.red {
+    background-color: #f68a8a;
+}
+
+.yellow {
+    background-color: #f2db7f;
+    color: black;
+}
+
+.green {
+    background-color: #9ce690;
+}
+
+.purple {
+    background-color: #a57ef5;
+}
+
+/* Click effect */
+.btn:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+/* Glow effect (for later use in JS) */
+.flash {
+    background-color: white !important;
+}
