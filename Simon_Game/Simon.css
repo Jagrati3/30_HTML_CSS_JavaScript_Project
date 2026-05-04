@@ -75,3 +75,7 @@ h2 {
 .flash {
     background-color: white !important;
 }
+
+.btnClickedByUser{
+    background-color: green;
+}
