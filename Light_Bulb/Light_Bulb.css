@@ -1,0 +1,91 @@
+/* Center everything */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.light {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ⭐ this centers wire + bulb */
+}
+
+/* Wire */
+.wire {
+    width: 4px;
+    height: 200px;
+    background: #555;
+}
+
+/* Bulb */
+.bulb {
+    font-size: 80px;
+    color: #444;
+    transition: 0.3s;
+    transform: rotate(180deg); 
+}
+
+/* Switch button */
+.switch {
+    position: fixed;   /* important */
+    top: 40px;
+    right: 40px;       /* better spacing */
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================== LIGHT ON STATE ================== */
+
+
+/* body becomes slightly lighter */
+body.on {
+    background-color: #222;
+}
+
+/* BULB GLOW */
+body.on .bulb {
+    color: #ffd84d; /* soft yellow */
+
+    text-shadow:
+        0 0 10px #fff7cc,
+        0 0 20px #ffe066,
+        0 0 40px #ffd84d,
+        0 0 80px #ffcc33;
+}
+
+/* LIGHT SPREAD AROUND BULB */
+body.on::before {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background: radial-gradient(circle, rgba(255, 223, 100, 0.8), transparent 70%);
+    
+    border-radius: 50%;
+
+    top: 65%;         /* adjust based on bulb position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    filter: blur(50px);
+
+    z-index: 0; /* keep it behind bulb */
+}
