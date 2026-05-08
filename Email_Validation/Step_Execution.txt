@@ -1,0 +1,230 @@
+# Step By Step Execution Flow
+
+### Step 1
+
+HTML creates:
+
+* input field
+* icon area
+* error message
+
+---
+
+### Step 2
+
+CSS styles the page.
+
+It adds:
+
+* colors
+* box
+* animation
+* borders
+* alignment
+
+---
+
+### Step 3
+
+JavaScript selects elements using:
+
+```javascript
+getElementById()
+```
+
+Example:
+
+```javascript
+let emailId = document.getElementById("email-id");
+```
+
+---
+
+### Step 4
+
+User starts typing:
+
+```text
+hello@gmail.com
+```
+
+inside input field.
+
+---
+
+### Step 5
+
+Because of:
+
+```html
+oninput="checker()"
+```
+
+the `checker()` function runs automatically.
+
+---
+
+### Step 6
+
+JavaScript gets input value using:
+
+```javascript
+emailId.value
+```
+
+Now:
+
+```javascript
+email = "hello@gmail.com"
+```
+
+---
+
+### Step 7
+
+JavaScript checks:
+
+```javascript
+if(email === "")
+```
+
+If empty:
+
+* hide icon
+* hide error
+* gray border
+
+---
+
+### Step 8
+
+If not empty:
+
+```javascript
+validateEmail(email)
+```
+
+function runs.
+
+---
+
+### Step 9
+
+Inside `validateEmail()`:
+
+JavaScript finds:
+
+* `@` position
+* `.` position
+
+using:
+
+```javascript
+indexOf("@")
+lastIndexOf(".")
+```
+
+---
+
+### Step 10
+
+For example:
+
+```text
+hello@gmail.com
+```
+
+* `@` exists
+* `.` exists
+* proper format exists
+
+So condition becomes:
+
+```javascript
+true
+```
+
+---
+
+### Step 11
+
+Function returns:
+
+```javascript
+return true;
+```
+
+---
+
+### Step 12
+
+Now `checker()` shows:
+
+* green border
+* green check icon
+* hides error message
+
+---
+
+# Invalid Email Example
+
+User types:
+
+```text
+hello@gmail
+```
+
+---
+
+### Step 13
+
+`validateEmail()` checks format.
+
+But `.com` is missing.
+
+Condition becomes:
+
+```javascript
+false
+```
+
+---
+
+### Step 14
+
+Function returns:
+
+```javascript
+return false;
+```
+
+---
+
+### Step 15
+
+Now `checker()` shows:
+
+* red border
+* red warning icon
+* error message
+
+---
+
+# Simple Logic Summary
+
+```text
+                      User Types
+                           ↓
+                      checker() Runs
+                           ↓
+                      Get Input Value
+                           ↓
+                      Validate Email
+                           ↓
+                         Valid ? 
+                       ↓         ↓
+                      YES       NO
+                       ↓         ↓
+                      Green     Red
+                      UI        UI
+```
