@@ -1,46 +1,170 @@
-*{
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(245, 115, 173);
+}
+
+.drop {
+  background-color: aqua;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 5%;
+  border: 4px solid black;
+  position: absolute;
+  animation: animate 5s linear;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+    transform: scale(2);
+  }
+
+  25% {
+    border-radius: 25%;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(3);
+    border-radius: 35%;
+    background-color: blueviolet;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(4);
+    border-radius: 50%;
+    background-color: #ffff00;
+  }
+} */
+/*
+    Remove default margin and padding
+    from all HTML elements.
+*/
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body{
+
+/*
+    Give the entire page
+    a pink background.
+*/
+body {
     background-color: rgb(245, 115, 173);
+
+    /*
+        Hide anything that goes outside
+        the browser window.
+
+        This is optional.
+    */
+    overflow: hidden;
 }
 
-.drop{
+
+/*
+    This is the actual drop.
+
+    JavaScript creates a <span>
+    and adds the "drop" class to it.
+*/
+.drop {
+
+    /* Starting background color */
     background-color: aqua;
+
+    /* Size of the drop */
     height: 5rem;
     width: 5rem;
+
+    /* Slightly rounded corners */
     border-radius: 5%;
+
+    /* Black border */
     border: 4px solid black;
+
+    /*
+        Allows JavaScript to control
+        top and left positions.
+    */
     position: absolute;
+
+    /*
+        Start the "animate" animation.
+
+        5s    = animation duration
+        linear = same animation speed
+    */
     animation: animate 5s linear;
-    transition: all 0.5s ease-in-out;
 }
 
+
+/*
+    CSS KEYFRAME ANIMATION
+
+    The browser moves between
+    these different stages.
+*/
 @keyframes animate {
-    0%{
-opacity: 1;
-transform: scale(2);
+
+    /* Beginning of animation */
+    0% {
+
+        /* Fully visible */
+        opacity: 1;
+
+        /* Make the element 2x larger */
+        transform: scale(2);
     }
 
-    25%{
-border-radius: 25%;
+
+    /* 25% of the animation */
+    25% {
+
+        /* Make corners more rounded */
+        border-radius: 25%;
     }
 
-    50%{
-opacity: 0.5;
-transform: scale(3);
-border-radius: 35%;
-background-color: blueviolet;
 
+    /* Halfway through animation */
+    50% {
+
+        /* Make it partly transparent */
+        opacity: 0.5;
+
+        /* Make it 3x larger */
+        transform: scale(3);
+
+        /* More rounded */
+        border-radius: 35%;
+
+        /* Change color */
+        background-color: blueviolet;
     }
 
-    100%{
-opacity: 1;
-transform: scale(4);
-border-radius: 50%;
-background-color: #FFFF00;
+
+    /* End of animation */
+    100% {
+
+        /* Fully visible again */
+        opacity: 1;
+
+        /* Make it 4x larger */
+        transform: scale(4);
+
+        /* Make it completely round */
+        border-radius: 50%;
+
+        /* Change color to yellow */
+        background-color: #ffff00;
     }
 }
