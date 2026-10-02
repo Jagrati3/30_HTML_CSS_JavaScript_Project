@@ -1,35 +1,4 @@
-// const container = document.querySelector(".container");
 
-
-// function dropped(){
-//     const drop = document.createElement("span");
-
-//     drop.style.top = Math.random() * innerHeight + "px";
-
-
-//     drop.style.left = Math.random() * innerWidth + "px";
-
-
-//     setTimeout(()=>{
-//         drop.remove();
-//     },6500);
-
-//     container.appendChild(drop)
-// }
-
-// setTimeout(dropped,500);
-
-
-
-/*
-    Find the element having class "container".
-
-    HTML:
-    <div class="container"></div>
-
-    We store it inside the variable "container"
-    so JavaScript can add drops inside it.
-*/
 const container = document.querySelector(".container");
 
 
@@ -46,18 +15,6 @@ function dropped() {
     */
     const drop = document.createElement("span");
 
-
-    /*
-        IMPORTANT FIX
-
-        Add the "drop" class.
-
-        Now the element becomes:
-
-        <span class="drop"></span>
-
-        Therefore the CSS .drop {} will apply.
-    */
     drop.classList.add("drop");
 
 
