@@ -18,31 +18,9 @@ function dropped() {
     drop.classList.add("drop");
 
 
-    /*
-        Give the drop a RANDOM vertical position.
-
-        Math.random()
-        gives a number between 0 and 1.
-
-        innerHeight
-        gives the browser window height.
-
-        Example:
-        0.5 × 800 = 400px
-
-        So:
-        top: 400px;
-    */
     drop.style.top =
         Math.random() * window.innerHeight + "px";
-
-
-    /*
-        Give the drop a RANDOM horizontal position.
-
-        innerWidth
-        gives the browser window width.
-    */
+    // ye browser ki left height dega 
     drop.style.left =
         Math.random() * window.innerWidth + "px";
 
